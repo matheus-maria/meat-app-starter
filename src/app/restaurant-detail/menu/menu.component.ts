@@ -19,4 +19,8 @@ export class MenuComponent implements OnInit {
       .subscribe( menu => this.menu = menu )
   }
 
+  addMenuItem = ( item: MenuItem ) => {
+    console.log( item )
+  }
+
 }
