@@ -7,7 +7,7 @@
 <section class="content">
   <div class="row">
     <div class="col-xs-12">
-      <div class="box box-solid">
+      <div class="box box-solid" *ngIf="restaurant">
         <div class="box-header with-border">
           <i class="fa fa-home"></i>
 
@@ -30,10 +30,10 @@
         </div>
         <!-- /.box-body -->
         <div class="box-footer detail-footer">
-          <a class="pull-left detail-active" href="detail-restaurant.html">
+          <a class="pull-left" routerLinkActive="detail-active" [routerLink]="['menu']">
             Menu
           </a>
-          <a class="pull-right" href="detail-restaurant-reviews.html">
+          <a class="pull-right" routerLinkActive="detail-active" [routerLink]="['reviews']">
             Avaliações
           </a>
         </div>
@@ -46,7 +46,7 @@
 
   <div class="row">
     <!--INÍCIO DO MENU -->
-    <mt-menu></mt-menu>
+    <router-outlet></router-outlet>    
     <!-- FIM DO MENU -->
   </div>
 
