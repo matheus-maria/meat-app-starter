@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RestaurantService } from 'app/restaurants/restaurants.service';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
+import { Review } from './reviews.model';
 
 @Component({
   selector: 'mt-reviews',
@@ -12,7 +13,7 @@ export class ReviewsComponent implements OnInit {
 
   constructor(private restaurantService: RestaurantService, private route: ActivatedRoute) { }
 
-  reviews: Observable<any>
+  reviews: Observable<Review>
 
   ngOnInit() { 
     // Both ways gona work
