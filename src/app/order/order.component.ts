@@ -21,6 +21,18 @@ export class OrderComponent implements OnInit {
   ngOnInit() {
   }
 
+  itensTotalValue = (): number => {
+    return this.cartItems().map( item => item.value() ).reduce( (prev, value) => prev + value,0 )
+  }
+
+  shipCostTotalValue = (): number => {
+    return 0
+  }
+
+  totalValue = (): number => {
+    return this.itensTotalValue() + this.shipCostTotalValue()
+  }
+
   cartItems = (): CartItem[] => {
     return this.orderService.cartItems()
   }

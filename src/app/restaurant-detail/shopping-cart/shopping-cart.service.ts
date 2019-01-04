@@ -26,8 +26,7 @@ export class ShoppingCartService {
     } 
 
     increaseQtd = (item: CartItem): void => {
-        item.quantity += 1 
-        console.log('A');
+        item.quantity += 1         
     }
 
     decreaseQtd = (item: CartItem): void => {
