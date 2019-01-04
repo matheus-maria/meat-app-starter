@@ -35,13 +35,13 @@ export class OrderService {
             return 8;
     }
 
-    checkOrder = (order: Order): Observable <string> => {
-
+    checkOrder = (order: Order): Observable<string> => {
         const headers = new Headers()
         headers.append('Content-Type','application/json')
         
         return this.http.post(`${MEAT_API}/orders`,JSON.stringify(order), new RequestOptions({ headers }))
             .map( response => response.json())
+            .map( order => order.id )
     }
 
     clear = () => {
