@@ -23,4 +23,11 @@ export class OrderService {
         this.cartService.removeItem(item)
     }
 
+    deliveryValue = (): number => {
+        if(this.cartItems().length === 0)
+            return 0;
+        else
+            return 8;
+    }
+
 }
