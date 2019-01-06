@@ -16,6 +16,7 @@ import { ReviewsComponent } from './components/restaurant-detail/reviews/reviews
 import { OrderSummaryComponent } from './modules/order-summary/order-summary.component';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -34,9 +35,10 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules}),    
     SharedModule,
-    CoreModule    
+    CoreModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules})     
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt-BR' }
