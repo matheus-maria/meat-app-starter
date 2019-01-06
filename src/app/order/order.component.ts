@@ -4,7 +4,7 @@ import { OrderService } from './order.service';
 import { CartItem } from 'app/restaurant-detail/shopping-cart/cart-item.model';
 import { Order, OrderItem } from './order.model';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validator, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, Validator, Validators, AbstractControl} from '@angular/forms';
 
 @Component({
   selector: 'mt-order',
@@ -58,8 +58,24 @@ export class OrderComponent implements OnInit {
         Validators.required
       ])
 
+    }, {
+      validator: OrderComponent.equaltsTo
     })
   }  
+
+  static equaltsTo = (group: AbstractControl): {[key:string]: boolean} => {
+    const email = group.get('email')
+    const emailConfirmarion = group.get('emailConfirmation')
+
+    if (!email || !emailConfirmarion)
+      return undefined
+    else {
+      if(email.value != emailConfirmarion.value && emailConfirmarion.dirty)
+        return { emailsNotMatch: true }
+      else
+        return undefined
+    }
+  }
 
   cartItems = (): CartItem[] => {
     return this.orderService.cartItems()
