@@ -10,12 +10,9 @@ const ROUTES: Routes = [
     declarations:[
         AboutComponent        
     ],
-    imports:[
-        RouterModule,
+    imports:[        
         RouterModule.forChild(ROUTES)
     ],
     exports:[]
 })
-export class AboutModule {
-
-}
+export class AboutModule { }
