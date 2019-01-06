@@ -1,4 +1,4 @@
-import { Restaurant } from "../restaurants/restaurant/restaurant.model";
+import { Restaurant } from "../components/restaurants/restaurant/restaurant.model";
 import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
 import { MEAT_API } from "app/app.api";
@@ -6,8 +6,8 @@ import { Observable } from "rxjs/Observable";
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { ErrorHandler } from "app/app-error-handler";
-import { MenuItem } from "app/restaurant-detail/menu-item/menu-item.model";
-import { Review } from "app/restaurant-detail/reviews/reviews.model";
+import { MenuItem } from "../components/restaurant-detail/menu-item/menu-item.model";
+import { Review } from "../components/restaurant-detail/reviews/reviews.model";
 
 @Injectable()
 export class RestaurantService {

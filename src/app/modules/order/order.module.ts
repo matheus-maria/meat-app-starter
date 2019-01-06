@@ -20,6 +20,4 @@ const ROUTES: Routes = [
         RouterModule.forChild(ROUTES) 
     ]
 })
-export class OrderModule {
-
-}
+export class OrderModule { }

@@ -1,14 +1,14 @@
 import { Routes } from "@angular/router";
-import { HomeComponent } from "./home/home.component";
-import { RestaurantsComponent } from "./restaurants/restaurants.component";
-import { RestaurantDetailComponent } from "./restaurant-detail/restaurant-detail.component";
-import { MenuComponent } from "./restaurant-detail/menu/menu.component";
-import { ReviewsComponent } from "./restaurant-detail/reviews/reviews.component";
-import { OrderSummaryComponent } from "./order-summary/order-summary.component";
+import { HomeComponent } from "./components/home/home.component";
+import { RestaurantsComponent } from "./components/restaurants/restaurants.component";
+import { RestaurantDetailComponent } from "./components/restaurant-detail/restaurant-detail.component";
+import { MenuComponent } from "./components/restaurant-detail/menu/menu.component";
+import { ReviewsComponent } from "./components/restaurant-detail/reviews/reviews.component";
+import { OrderSummaryComponent } from "./modules/order-summary/order-summary.component";
 
 export const ROUTES: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'about', loadChildren: './about/about.module#AboutModule' },
+    { path: 'about', loadChildren: './modules/about/about.module#AboutModule' },
     { path: 'restaurants', component: RestaurantsComponent },
     { path: 'restaurants/:id', component: RestaurantDetailComponent,
         children: [
@@ -16,7 +16,7 @@ export const ROUTES: Routes = [
             { path: 'menu', component: MenuComponent },
             { path: 'reviews', component: ReviewsComponent }
         ]
-    },
-    { path: 'order', loadChildren: './order/order.module#OrderModule' },
+    },    
+    { path: 'order', loadChildren: './modules/order/order.module#OrderModule' },
     { path: 'order-summary', component: OrderSummaryComponent },
 ] 

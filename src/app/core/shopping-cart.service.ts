@@ -1,5 +1,5 @@
-import { CartItem } from "../restaurant-detail/shopping-cart/cart-item.model";
-import { MenuItem } from "../restaurant-detail/menu-item/menu-item.model";
+import { CartItem } from "../components/restaurant-detail/shopping-cart/cart-item.model";
+import { MenuItem } from "../components/restaurant-detail/menu-item/menu-item.model";
 
 export class ShoppingCartService {
 

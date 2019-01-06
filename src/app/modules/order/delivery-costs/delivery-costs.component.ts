@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CartItem } from 'app/restaurant-detail/shopping-cart/cart-item.model';
+import { CartItem } from '../../../components/restaurant-detail/shopping-cart/cart-item.model';
 
 @Component({
   selector: 'mt-delivery-costs',
