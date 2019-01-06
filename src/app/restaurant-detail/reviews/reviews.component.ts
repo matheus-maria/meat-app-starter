@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RestaurantService } from 'app/restaurants/restaurants.service';
+import { RestaurantService } from 'app/core/restaurants.service';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { Review } from './reviews.model';
