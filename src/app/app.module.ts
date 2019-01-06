@@ -5,7 +5,7 @@ import { RouterModule, PreloadAllModules } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
-import { ROUTES } from './app.routes';
+import { ROUTES } from './shared/app.routes';
 import { RestaurantsComponent } from './components/restaurants/restaurants.component';
 import { RestaurantComponent } from './components/restaurants/restaurant/restaurant.component';
 import { RestaurantDetailComponent } from './components/restaurant-detail/restaurant-detail.component';
