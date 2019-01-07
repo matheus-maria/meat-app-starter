@@ -18,6 +18,7 @@ import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './components/not-found/not-found.component'
+import { LocationStrategy, HashLocationStrategy } from '@angular/common'
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component'
     RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules})     
   ],
   providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: LOCALE_ID, useValue: 'pt-BR' }
   ],
   bootstrap: [AppComponent]
