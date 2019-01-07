@@ -1,4 +1,7 @@
 input {
     border-radius: 20px;
-    margin-top: 10px;
+}
+.search-bar {
+    opacity: 0;
+    max-height: 0px;    
 }
