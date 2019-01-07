@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+ /* You can add global styles to this file, and also import other style files */
 
 body {
   color: #555;
@@ -260,4 +260,13 @@ body {
 
 .has-error-block {
   color: #dd4b39;
+}
+
+.search-link {
+  cursor: pointer;
+  color: #555;
+}
+
+.search-link :hover {
+  color: #dd4b39
 }
