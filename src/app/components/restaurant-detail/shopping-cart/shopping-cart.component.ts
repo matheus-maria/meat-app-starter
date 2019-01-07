@@ -18,7 +18,6 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
       ]))),
       transition('ready => void',animate('500ms 0s ease-out', keyframes([
         style({ opacity:1, transform: 'translateX(0px)', offset:0 }),
-        style({ opacity:0.2, transform: 'translateX(-10px)', offset:0.2 }),
         style({ opacity:0, transform: 'translateX(30px)', offset:1 })
       ])))
     ])
